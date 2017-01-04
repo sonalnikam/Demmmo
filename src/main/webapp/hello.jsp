@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-hello world
+Hello team, this is the demo app in Java using Maven
 </body>
 </html>
