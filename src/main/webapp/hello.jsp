@@ -6,7 +6,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
-Hello team, this is the demo app in Java using Maven
+<body bgcolor="#D1A26B">
+<form action="helloworld.jsp" method="post" >
+<h1><center>Hello World</center></h1>
+Enter Name:<input type="text" name="n1">
+<input type="submit" name="submit" value="submit">
+</form>
 </body>
 </html>
