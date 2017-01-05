@@ -9,8 +9,19 @@
 <body bgcolor="#A3F0EB">
 <h1>
 <center>Hello 
-<% String s=request.getParameter("n1"); 
-out.print(s);
+<% 
+ Connection c=null;
+                PreparedStatement pstmt;
+                ResultSet rs;
+                String url="jdbc:mysql://172.30.40.75:3306/sampledb" ;
+                Class.forName("com.mysql.jdbc.Driver");
+                c =DriverManager.getConnection(url,"sonal","sonal");
+          
+              String r1=request.getParameter("n1");
+              pstmt=c.prepareStatement("insert into  attend values(?)");
+              pstmt.setString(1,r1);
+              pstmt.executeUpdate();
+out.print(r1);
 %></center>
 </h1>
 </body>
