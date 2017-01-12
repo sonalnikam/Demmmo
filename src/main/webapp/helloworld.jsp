@@ -32,7 +32,7 @@
                     "/" + DB_NAME;
               Connection con = DriverManager.getConnection(url, USERNAME, PASSWORD);     
               String r1=request.getParameter("n1");
-              PreparedStatement pstmt=c.prepareStatement("insert into  attend values(?)");
+              PreparedStatement pstmt=con.prepareStatement("insert into  attend values(?)");
               pstmt.setString(1,r1);
               pstmt.executeUpdate();
 out.print(r1);
