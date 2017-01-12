@@ -21,12 +21,12 @@
                // Connection c =DriverManager.getConnection(url,"sonal","sonal");
             //  Connection c =DriverManager.getConnection(envVar);  
      Class.forName("com.mysql.jdbc.Driver");      
-     private static final String
-     HOST = System.getenv("OPENSHIFT_MYSQL_DB_HOST"),
-     PORT = System.getenv("OPENSHIFT_MYSQL_DB_PORT"),
-     USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME"),
-     PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD"),
-     DB_NAME = "sampledb";
+
+  String HOST = System.getenv("OPENSHIFT_MYSQL_DB_HOST"),
+  String PORT = System.getenv("OPENSHIFT_MYSQL_DB_PORT"),
+  String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME"),
+  String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD"),
+  String DB_NAME = "sampledb";
             
               String url = "jdbc:mysql://" + HOST + ":" + PORT +
                     "/" + DB_NAME;
