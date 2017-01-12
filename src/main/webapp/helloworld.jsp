@@ -15,10 +15,11 @@
 <center>Hello 
 <% 
 
+                String envVar = System.getenv("MYSQL_URL");
                 String url="jdbc:mysql://172.30.54.105:3306/sampledb" ;
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection c =DriverManager.getConnection(url,"sonal","sonal");
-          
+               // Connection c =DriverManager.getConnection(url,"sonal","sonal");
+              Connection c =DriverManager.getConnection(envVar);         
               String r1=request.getParameter("n1");
               PreparedStatement pstmt=c.prepareStatement("insert into  attend values(?)");
               pstmt.setString(1,r1);
