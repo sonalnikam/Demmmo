@@ -22,10 +22,10 @@
             //  Connection c =DriverManager.getConnection(envVar);  
      Class.forName("com.mysql.jdbc.Driver");      
 
-  String HOST = System.getenv("OPENSHIFT_MYSQL_DB_HOST"),
-  String PORT = System.getenv("OPENSHIFT_MYSQL_DB_PORT"),
-  String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME"),
-  String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD"),
+  String HOST = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
+  String PORT = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
+  String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+  String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
   String DB_NAME = "sampledb";
             
               String url = "jdbc:mysql://" + HOST + ":" + PORT +
