@@ -15,7 +15,7 @@
 <center>Hello 
 <% 
 
-                String url="jdbc:mysql://172.30.252.80:3306/sampledb" ;
+                String url="jdbc:mysql://172.30.54.105:3306/sampledb" ;
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection c =DriverManager.getConnection(url,"sonal","sonal");
           
