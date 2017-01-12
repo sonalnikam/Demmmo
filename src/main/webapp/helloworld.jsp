@@ -26,7 +26,7 @@
   String PORT = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
   String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
   String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
-  String DB_NAME = "sampledb";
+  String DB_NAME = System.getenv("OPENSHIFT_MYSQL_DB_NAME");
             
               String url = "jdbc:mysql://" + HOST + ":" + PORT +
                     "/" + DB_NAME;
