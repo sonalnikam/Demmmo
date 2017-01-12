@@ -15,11 +15,22 @@
 <center>Hello 
 <% 
 
-                String envVar = System.getenv("MYSQL_URL");
-                String url="jdbc:mysql://172.30.54.105:3306/sampledb" ;
+              //  String envVar = System.getenv("MYSQL_URL");
+               // String url="jdbc:mysql://172.30.54.105:3306/sampledb" ;
                 Class.forName("com.mysql.jdbc.Driver");
                // Connection c =DriverManager.getConnection(url,"sonal","sonal");
-              Connection c =DriverManager.getConnection(envVar);         
+            //  Connection c =DriverManager.getConnection(envVar);  
+     Class.forName("com.mysql.jdbc.Driver");      
+     private static final String
+     HOST = System.getenv("OPENSHIFT_MYSQL_DB_HOST"),
+     PORT = System.getenv("OPENSHIFT_MYSQL_DB_PORT"),
+     USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME"),
+     PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD"),
+     DB_NAME = "sampledb";
+            
+              String url = "jdbc:mysql://" + HOST + ":" + PORT +
+                    "/" + DB_NAME;
+              Connection con = DriverManager.getConnection(url, USERNAME, PASSWORD);     
               String r1=request.getParameter("n1");
               PreparedStatement pstmt=c.prepareStatement("insert into  attend values(?)");
               pstmt.setString(1,r1);
