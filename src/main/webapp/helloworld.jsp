@@ -17,7 +17,7 @@
 
               //  String envVar = System.getenv("MYSQL_URL");
                // String url="jdbc:mysql://172.30.54.105:3306/sampledb" ;
-                Class.forName("com.mysql.jdbc.Driver");
+              
                // Connection c =DriverManager.getConnection(url,"sonal","sonal");
             //  Connection c =DriverManager.getConnection(envVar);  
      Class.forName("com.mysql.jdbc.Driver");      
