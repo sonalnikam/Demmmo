@@ -62,11 +62,11 @@ if [ -f "$local_source_dir/pom.xml" ]; then
     cp -r modules/* /wildfly/provided_modules
   fi
 
-  echo "...done"
+  echo "..s.done"
 
   popd &> /dev/null
 else
-  echo "Copying binaries in source directory into $deploy_dir for later deployment..."
+  echo "sCopying binaries in source directory into $deploy_dir for later deployment..."
   if [ -d $local_source_dir/target ]; then
     cp $local_source_dir/target/*.war $deploy_dir >& /dev/null
   fi
@@ -79,7 +79,7 @@ else
   fi
 
   if [ -d $local_source_dir/modules ]; then
-    echo "Copying modules from project..."
+    echo "sCopying modules from project..."
     mkdir /wildfly/provided_modules
     cp -r modules/* /wildfly/provided_modules
   fi
