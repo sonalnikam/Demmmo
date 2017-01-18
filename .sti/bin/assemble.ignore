@@ -8,9 +8,9 @@
 function restore_saved_artifacts() {
   if [ -f /tmp/artifacts/maven.tar.gz ]; then
     pushd / &> /dev/null
-    echo -n "Restoring saved artifacts from prior build..."
+    echo -n "sRestoring saved artifacts from prior build..."
     tar zxf /tmp/artifacts/maven.tar.gz
-    echo "...sdone"
+    echo "...ssdone"
     popd &> /dev/null
   fi
 }
@@ -39,7 +39,7 @@ if [ -f "$local_source_dir/pom.xml" ]; then
   mvn clean package -Popenshift -DskipTests
   err=$?
   if [ $err -ne 0 ]; then
-    echo "Aborting due to error code $err from mvn package"
+    echo "sAborting due to error code $err from mvn package"
     exit $err
   fi
 
@@ -52,12 +52,12 @@ if [ -f "$local_source_dir/pom.xml" ]; then
   fi
   
   if [ -d $local_source_dir/cfg ]; then
-    echo "Copying config files from project..."
+    echo "sCopying config files from project..."
     cp cfg/* /wildfly/standalone/configuration
   fi
 
   if [ -d $local_source_dir/modules ]; then
-    echo "Copying modules from project..."
+    echo "sCopying modules from project..."
     mkdir /wildfly/provided_modules
     cp -r modules/* /wildfly/provided_modules
   fi
@@ -74,7 +74,7 @@ else
     cp $local_source_dir/deployments/*.war $deploy_dir >& /dev/null
   fi
   if [ -d $local_source_dir/cfg ]; then
-    echo "Copying config files from project..."
+    echo "sCopying config files from project..."
     cp cfg/* /wildfly/standalone/configuration
   fi
 
