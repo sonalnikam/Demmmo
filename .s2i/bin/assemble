@@ -56,7 +56,7 @@ function waitondeployments() {
 
       while read -r -d $'\0'; do
         artifacts+=("$REPLY")
-      done < <(find . -iregex '.*\.\([ejrsw]ar\|zip\)$' -print0)
+      done <(find . -iregex '.*\.\([ejrsw]ar\|zip\)$' -print0)
 
       deployexploded=false
       if [[ $SCANCONFIG =~ '"auto-deploy-exploded" => true' ]]; then
