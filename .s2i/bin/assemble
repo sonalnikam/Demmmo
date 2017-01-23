@@ -5,7 +5,7 @@
 
 # install appdynamics agent
 curl -H "Accept: application/zip" https://codeload.github.com/benemon/fis-java-appdynamics-plugin/zip/master -o /deployments/appdynamics.zip
-sudo mkdir /deployments
+#sudo mkdir /deployments
 pushd /deployments
 unzip appdynamics.zip
     pushd fis-java-appdynamics-plugin-master/
