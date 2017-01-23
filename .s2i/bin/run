@@ -1,5 +1,5 @@
 #!/bin/bash
-exec /wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
+#exec /wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
 if [ x"$APPDYNAMICS_AGENT_ACCOUNT_NAME" != "x" ]; then
     mkdir /deployments/logs
     export JAVA_OPTIONS="-javaagent:/deployments/appdynamics/javaagent.jar -Dappdynamics.agent.logs.dir=/deployments/logs $JAVA_OPTIONS"
