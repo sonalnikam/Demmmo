@@ -11,6 +11,6 @@ unzip appdynamics.zip
     pushd ad-master/
     mv appdynamics/ ../
     popd
-rm -rf ad-master/
-rm -f appdynamics.zip
-popd
+#rm -rf ad-master/
+#rm -f appdynamics.zip
+#popd
