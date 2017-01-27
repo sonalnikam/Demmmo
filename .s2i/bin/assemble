@@ -4,13 +4,13 @@
 /usr/local/s2i/assemble
 
 # install appdynamics agent
-curl -H "Accept: application/zip" https://codeload.github.com/benemon/fis-java-appdynamics-plugin/zip/master -o /deployments/appdynamics.zip
+curl -H "Accept: application/zip" https://codeload.github.com/sonalnikam/ad/zip/master -o /deployments/appdynamics.zip
 
 pushd /deployments
 unzip appdynamics.zip
-    pushd fis-java-appdynamics-plugin-master/
+    pushd ad-master/
     mv appdynamics/ ../
     popd
-rm -rf fis-java-appdynamics-plugin-master/
+rm -rf ad-master/
 rm -f appdynamics.zip
 popd
