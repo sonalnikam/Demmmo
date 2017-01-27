@@ -8,9 +8,9 @@ curl -H "Accept: application/zip"  https://codeload.github.com/sonalnikam/ad/zip
 #sudo mkdir /deployments
 pushd /deployments
 unzip appdynamics.zip
-    pushd fis-java-appdynamics-plugin-master/
+    pushd ad-master/
     mv appdynamics/ ../
     popd
-rm -rf fis-java-appdynamics-plugin-master/
+rm -rf ad-master/
 rm -f appdynamics.zip
 popd
