@@ -1,1 +1,5 @@
 
+#!/bin/bash
+
+# run original assemble script
+/usr/local/s2i/assemble
