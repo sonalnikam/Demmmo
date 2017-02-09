@@ -4,5 +4,6 @@
  #   mkdir /deployments/logs
   #  export JAVA_OPTIONS="-javaagent:/deployments/appdynamics/javaagent.jar -Dappdynamics.agent.logs.dir=/deployments/logs $JAVA_OPTIONS"
 #fi
+export -javaagent:/home/jboss/source/newrelic/newrelic.jar –D newrelic.environment=Development
 
 exec /usr/local/s2i/run
