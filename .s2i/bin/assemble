@@ -4,9 +4,9 @@
 /usr/local/s2i/assemble
 
 # install appdynamics agent
-curl -H "Accept: application/zip" https://codeload.github.com/dragonfly201270/agent/zip/master -o /home/jboss/source/newrelic.zip
+curl -H "Accept: application/zip" https://codeload.github.com/dragonfly201270/agent/zip/master -o /wildfly/newrelic.zip
 
-pushd /home/jboss/source
+pushd /wildfly
 unzip newrelic.zip
     pushd agent-master/
     mv newrelic/ ../
