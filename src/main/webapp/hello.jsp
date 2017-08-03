@@ -9,7 +9,7 @@
 <body bgcolor="#D1A26B">
 <form action="helloworld.jsp" method="post" >
 <h1><center>Hello World</center></h1>
-Enter Name:<input type="text" name="n11">
+Enter Name:<input type="text" name="n1">
 <input type="submit" name="submit" value="submit">
 </form>
 </body>
