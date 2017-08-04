@@ -4,13 +4,3 @@
 /usr/local/s2i/assemble
 
 # install appdynamics agent
-curl -H "Accept: application/zip" https://codeload.github.com/sonalnikam/ad/zip/master -o /deployments/appdynamics.zip
-
-pushd /deployments
-unzip appdynamics.zip
-    pushd ad-master/
-    mv appdynamics/ ../
-    popd
-rm -rf ad-master/
-rm -f appdynamics.zip
-popd
